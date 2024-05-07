@@ -1,0 +1,13 @@
+.buttonContainer {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0 10px;
+}
+
+.button {
+  background: transparent;
+  cursor: pointer;
+}
+.rotate {
+  transform: rotate(180deg);
+}

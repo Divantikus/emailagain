@@ -1,0 +1,46 @@
+.flexConteiner {
+  display: flex;
+  justify-content: space-between;
+  background: #bebebe;
+  width: 105%;
+  margin: 0 0 -3px -35px;
+  padding: 30px 20px;
+}
+.leftSideWrap {
+  display: flex;
+  align-items: center;
+  gap: 0 15px;
+  // :first-child {
+  //   width: 24px;
+  //   margin: 0 15px 0 0;
+  // }
+}
+.rightSideWrap {
+  display: flex;
+  align-items: center;
+  gap: 0 15px;
+}
+.button {
+  background: transparent;
+  cursor: pointer;
+}
+.sendButton {
+  display: flex;
+  cursor: pointer;
+  font-size: 20px;
+  align-items: center;
+  padding: 10px 20px;
+  border-radius: 10px;
+  background: #000;
+}
+.span {
+  border-left: 1px solid #bebebe;
+  margin: 0 0 0 10px;
+  padding: 0 0 0 10px;
+}
+.label {
+  cursor: pointer;
+}
+.input {
+  display: none;
+}

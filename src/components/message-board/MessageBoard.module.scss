@@ -1,0 +1,32 @@
+.mainBlock {
+  width: 200px;
+  height: 300px;
+  i {
+    font-style: italic;
+  }
+  b {
+    font-weight: 700;
+  }
+  flex: 0 1 50%;
+}
+.card {
+  display: flex;
+  flex-direction: column;
+  padding: 10px 20px;
+  margin: 0 0 20px 0;
+  border-radius: 5px;
+  border: 1px solid rgb(36, 34, 34);
+  background: #000;
+}
+.title {
+  font-style: italic;
+  text-decoration: underline;
+  margin: 0 0 20px 0;
+}
+.theme {
+  font-weight: 700;
+  margin: 0 0 10px 0;
+}
+.paragraph {
+  margin: 0 0 30px 0;
+}

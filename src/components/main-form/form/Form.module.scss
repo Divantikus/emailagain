@@ -1,0 +1,31 @@
+.formActive {
+  border-radius: 5px;
+  border: 3px solid rgb(116, 116, 240);
+  transition: 0.3s;
+}
+.form {
+  // height: 50%;
+  border: 3px solid transparent;
+  transition: 0.3s;
+}
+.inputWrap {
+  display: flex;
+  padding: 10px 0;
+  margin: 0 0 10px 0;
+  border-bottom: 1px solid gray;
+}
+.lable {
+  color: #000;
+  margin: 0 10px 0 0;
+}
+
+.inputUserName {
+  color: #000;
+  flex: 1 1 auto;
+  width: 100%;
+  background: transparent;
+  outline: none;
+  &:focus::placeholder {
+    color: transparent;
+  }
+}

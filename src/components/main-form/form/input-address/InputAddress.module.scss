@@ -1,0 +1,19 @@
+.inputWrap {
+  display: flex;
+  padding: 10px 0;
+  margin: 0 0 10px 0;
+  border-bottom: 1px solid gray;
+}
+.lable {
+  color: #000;
+  margin: 0 10px 0 0;
+}
+.inputUserName {
+  color: #000;
+  flex: 1 1 auto;
+  background: transparent;
+  outline: none;
+  &:focus::placeholder {
+    color: transparent;
+  }
+}

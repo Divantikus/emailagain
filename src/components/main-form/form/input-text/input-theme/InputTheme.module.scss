@@ -1,0 +1,11 @@
+.inputUserName {
+  color: #000;
+  flex: 1 1 auto;
+  width: 100%;
+  background: transparent;
+  outline: none;
+  &:focus::placeholder {
+    color: transparent;
+  }
+  margin: 0 0 5px 0;
+}

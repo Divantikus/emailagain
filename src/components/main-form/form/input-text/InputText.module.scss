@@ -1,0 +1,22 @@
+.textarea {
+  color: #000;
+  padding: 10px 0;
+  width: calc(100% - 20px);
+  height: 350px;
+  display: block;
+  resize: none;
+  outline: none;
+  &:focus::placeholder {
+    color: transparent;
+  }
+  background: #fff;
+  border-radius: 5px;
+}
+.textareaErr {
+  &::placeholder {
+    color: red;
+  }
+}
+.wrap {
+  position: relative;
+}
