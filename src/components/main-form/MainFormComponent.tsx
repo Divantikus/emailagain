@@ -1,7 +1,7 @@
-import { motion } from "framer-motion";
-import { useState } from "react";
-import { Form } from "./form/Form";
 import { AnimContext } from "src/context/context";
+import { useState } from "react";
+import { motion } from "framer-motion";
+import { Form } from "./form/Form";
 import style from "./mainFormComponent.module.scss";
 
 export const MainFormComponent = (): JSX.Element => {
