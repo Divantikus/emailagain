@@ -1,34 +1,17 @@
-import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
-import { emails } from "src/services/emails.service";
 import { DeletPostType } from "src/types/types";
-import parse from "html-react-parser";
+import { useDeletEmail } from "src/hook/useDeletEmail";
+import { useGetEmails } from "src/hook/useGetEmails";
 import style from "./MessageBoard.module.scss";
+import parse from "html-react-parser";
 export const MessageBoard = () => {
-  const queryClient = useQueryClient();
-  const { data: emailList } = useQuery({
-    queryKey: ["getEmails"],
-    queryFn: () => emails.getEmails(),
-  });
-  const { mutate, isPending } = useMutation({
-    mutationKey: ["deletEmail"],
-    mutationFn: () =>
-      new Promise((res) => {
-        const timer = setTimeout(() => {
-          clearTimeout(timer);
-          res("1");
-        }, 200);
-      }),
-    onSuccess() {
-      queryClient.refetchQueries({ queryKey: ["getEmails"] });
-    },
-  });
+  const { emailList } = useGetEmails();
+  const { mutate, isPending } = useDeletEmail();
   const deletePost: DeletPostType = async (event) => {
     const id = event.currentTarget.dataset.listnumber || "";
-    emails.deleteEmail(id);
-    mutate();
+    mutate(id);
   };
   return (
-    <section className={style.mainBlock} key={"kdfjsakjdsljdsfhksfk"}>
+    <section className={style.mainBlock}>
       {emailList
         ? emailList.map((item, index) => {
             return (
