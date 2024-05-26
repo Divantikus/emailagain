@@ -1,7 +1,7 @@
-import { MainFormComponent } from "./components/main-form/MainFormComponent";
-import { MessageBoard } from "./components/message-board/MessageBoard";
-import style from "./App.module.scss";
 import { FC } from "react";
+import { MessageBoard } from "./components/message-board/MessageBoard";
+import { MainFormComponent } from "./components/main-form/MainFormComponent";
+import style from "./App.module.scss";
 
 export const App: FC = () => {
   return (
