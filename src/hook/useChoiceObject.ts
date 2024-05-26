@@ -1,5 +1,5 @@
-import { useState } from "react";
 import { TypeChoiceObject, TypeUseChoiceObject } from "src/types/types";
+import { useState } from "react";
 
 export const useChoiceObject: TypeUseChoiceObject = (mod) => {
   mod = mod || {

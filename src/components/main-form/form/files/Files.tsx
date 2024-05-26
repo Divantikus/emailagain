@@ -1,7 +1,7 @@
+import { X } from "lucide-react";
 import { FC } from "react";
 import { TypeFiles } from "src/types/types";
 import style from "./Files.module.scss";
-import { X } from "lucide-react";
 export const Files: FC<TypeFiles> = ({ files, setFile }) => {
   const filesArr = [...files];
   return (

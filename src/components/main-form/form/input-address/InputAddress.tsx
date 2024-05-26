@@ -1,7 +1,7 @@
+import { useFormContext } from "react-hook-form";
 import { emailInputParam } from "../FormVar";
 import { AddressInputError } from "../input-errors/address-errors/AddressInputError";
 import { InputAddressErrors } from "src/types/types";
-import { useFormContext } from "react-hook-form";
 import style from "./InputAddress.module.scss";
 
 export const InputAddress: InputAddressErrors = () => {
@@ -29,7 +29,6 @@ export const InputAddress: InputAddressErrors = () => {
         })}
       />
       {errors.emailAddress && (
-        // @ts-ignore
         <AddressInputError emailAddress={errors.emailAddress} />
       )}
     </div>

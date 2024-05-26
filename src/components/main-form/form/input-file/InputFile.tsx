@@ -1,9 +1,9 @@
 import { TypeInputFiles } from "src/types/types";
-import style from "./InputFile.module.scss";
 import { ChangeEvent, FC } from "react";
+import style from "./InputFile.module.scss";
 export const inputFileId = "inputFileId";
 export const inputFileName = "inputFile";
-const InputFile: FC<TypeInputFiles> = ({ setFile }) => {
+export const InputFile: FC<TypeInputFiles> = ({ setFile }) => {
   const uploadFile = (event: ChangeEvent<HTMLInputElement>) => {
     const inputFiles: FileList = event?.target?.files
       ? event?.target?.files
@@ -20,5 +20,3 @@ const InputFile: FC<TypeInputFiles> = ({ setFile }) => {
     />
   );
 };
-
-export default InputFile;

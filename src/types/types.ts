@@ -29,9 +29,6 @@ export type FormType = {
 };
 //-------------
 export type ErrorsType = { type: string };
-export type AddressErrorType = ({}: {
-  emailAddress?: ErrorsType;
-}) => JSX.Element | null;
 //---------------
 export type TypeChangeStyleProps = {
   choiceObject: TypeChoiceObject;

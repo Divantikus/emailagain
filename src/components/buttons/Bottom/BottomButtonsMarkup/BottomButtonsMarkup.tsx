@@ -1,12 +1,12 @@
 import { CalendarDays, ClipboardList, Paperclip, Trash2 } from "lucide-react";
 import { useFormContext } from "react-hook-form";
-import { FC } from "react";
+import { inputFileId } from "src/components/main-form/form/input-file/InputFile";
 import { voidProps } from "src/types/types";
 import { formName } from "src/components/main-form/form/Form";
-import { inputFileId } from "src/components/main-form/form/input-file/InputFile";
+import { FC } from "react";
 import style from "./BottomButtonsMarkup.module.scss";
 
-const BottomButtonsMarkup: FC<voidProps> = ({ functionProps }) => {
+export const BottomButtonsMarkup: FC<voidProps> = ({ functionProps }) => {
   const { clearText, getClipboardInfo } = functionProps;
   const {
     formState: { isValid },
@@ -52,5 +52,3 @@ const BottomButtonsMarkup: FC<voidProps> = ({ functionProps }) => {
     </div>
   );
 };
-
-export default BottomButtonsMarkup;
