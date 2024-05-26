@@ -1,9 +1,10 @@
 import { DeletPostType } from "src/types/types";
 import { useDeletEmail } from "src/hook/useDeletEmail";
 import { useGetEmails } from "src/hook/useGetEmails";
+import { FC } from "react";
 import style from "./MessageBoard.module.scss";
 import parse from "html-react-parser";
-export const MessageBoard = () => {
+export const MessageBoard: FC = () => {
   const { emailList } = useGetEmails();
   const { mutate, isPending } = useDeletEmail();
   const deletePost: DeletPostType = async (event) => {

@@ -1,8 +1,8 @@
 import { ChevronDown, MoveDiagonal, X } from "lucide-react";
-import { useContext } from "react";
+import { FC, useContext } from "react";
 import { AnimContext } from "src/context/context";
 import style from "./TopButtons.module.scss";
-export const TopButtons = () => {
+export const TopButtons: FC = () => {
   const context = useContext(AnimContext);
   const AnimFn = () => {
     if (context) {

@@ -1,10 +1,10 @@
+import { FC, useState } from "react";
 import { AnimContext } from "src/context/context";
-import { useState } from "react";
 import { motion } from "framer-motion";
 import { Form } from "./form/Form";
 import style from "./mainFormComponent.module.scss";
 
-export const MainFormComponent = (): JSX.Element => {
+export const MainFormComponent: FC = () => {
   const [emailIsHidden, setEmailIsHidden] = useState(false);
   return (
     <AnimContext.Provider value={{ setEmailIsHidden, emailIsHidden }}>

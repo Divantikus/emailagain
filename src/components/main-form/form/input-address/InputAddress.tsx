@@ -13,6 +13,7 @@ export const InputAddress: InputAddressErrors = () => {
   const clearValidationError = () => {
     errors.emailAddress ? clearErrors("emailAddress") : null;
   };
+
   return (
     <div className={style.inputWrap}>
       <label htmlFor="emailAddress" className={style.lable}>

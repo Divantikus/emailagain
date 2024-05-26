@@ -3,6 +3,7 @@ import { ChangeEvent, FC } from "react";
 import style from "./InputFile.module.scss";
 export const inputFileId = "inputFileId";
 export const inputFileName = "inputFile";
+
 export const InputFile: FC<TypeInputFiles> = ({ setFile }) => {
   const uploadFile = (event: ChangeEvent<HTMLInputElement>) => {
     const inputFiles: FileList = event?.target?.files

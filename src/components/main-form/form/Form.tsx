@@ -10,10 +10,12 @@ import { InputFile } from "./input-file/InputFile";
 import { useMyForm } from "src/hook/useMyForm";
 import { FormType } from "src/types/types";
 import { Files } from "./files/Files";
+import { FC } from "react";
 import InputTheme from "./input-text/input-theme/InputTheme";
 import style from "./Form.module.scss";
 export const formName = "form";
-export const Form = () => {
+
+export const Form: FC = () => {
   const { files, isDrag, setFile, setIsDrag } = useDragAndDrop();
   const { handleSubmit, methods, reset } = useMyForm();
   const { mutate } = useCreateEmail();
@@ -22,6 +24,7 @@ export const Form = () => {
     mutate(data);
     reset();
   };
+
   return (
     <>
       <FormProvider {...methods}>

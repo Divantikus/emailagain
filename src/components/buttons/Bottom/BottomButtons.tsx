@@ -1,7 +1,9 @@
 import { BottomButtonsMarkup } from "./BottomButtonsMarkup/BottomButtonsMarkup";
 import { useFormContext } from "react-hook-form";
 import { textAreaName } from "src/components/main-form/form/input-text/InputText";
-export const BottomButtons = () => {
+import { FC } from "react";
+
+export const BottomButtons: FC = () => {
   const { setValue, getValues } = useFormContext();
   const getClipboardInfo = async () => {
     const textareaValue = getValues(textAreaName);
