@@ -1,12 +1,12 @@
 .buttonContainer {
+  gap: 0 10px;
   display: flex;
   justify-content: flex-end;
-  gap: 0 10px;
 }
 
 .button {
-  background: transparent;
   cursor: pointer;
+  background: transparent;
 }
 .rotate {
   transform: rotate(180deg);

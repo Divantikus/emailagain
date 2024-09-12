@@ -1,24 +1,20 @@
 .flexConteiner {
-  display: flex;
-  justify-content: space-between;
-  background: #bebebe;
   width: 105%;
-  margin: 0 0 -3px -35px;
+  display: flex;
   padding: 30px 20px;
+  background: #bebebe;
+  margin: 0 0 -3px -35px;
+  justify-content: space-between;
 }
 .leftSideWrap {
+  gap: 0 15px;
   display: flex;
   align-items: center;
-  gap: 0 15px;
-  // :first-child {
-  //   width: 24px;
-  //   margin: 0 15px 0 0;
-  // }
 }
 .rightSideWrap {
+  gap: 0 15px;
   display: flex;
   align-items: center;
-  gap: 0 15px;
 }
 .button {
   background: transparent;
@@ -28,15 +24,15 @@
   display: flex;
   cursor: pointer;
   font-size: 20px;
-  align-items: center;
-  padding: 10px 20px;
-  border-radius: 10px;
   background: #000;
+  padding: 10px 20px;
+  align-items: center;
+  border-radius: 10px;
 }
 .span {
-  border-left: 1px solid #bebebe;
   margin: 0 0 0 10px;
   padding: 0 0 0 10px;
+  border-left: 1px solid #bebebe;
 }
 .label {
   cursor: pointer;

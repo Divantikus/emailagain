@@ -5,9 +5,8 @@ export const useChoiceObject: TypeUseChoiceObject = (mod) => {
   mod = mod || {
     text: "",
     isSelect: false,
-    coordinates: [0, 0, 0],
+    coordinates: { X: 0, Y: 0 },
     choice: { start: 0, end: 0 },
   };
-  const [choiceObject, setChoiceObject] = useState<TypeChoiceObject>(mod);
-  return [choiceObject, setChoiceObject];
+  return useState<TypeChoiceObject>(mod);
 };

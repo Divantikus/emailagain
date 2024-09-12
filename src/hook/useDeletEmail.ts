@@ -3,14 +3,12 @@ import { emails } from "src/services/emails.service";
 
 export const useDeletEmail = () => {
   const queryClient = useQueryClient();
-  const { mutate, isPending } = useMutation({
+
+  return useMutation({
     mutationKey: ["deletEmail"],
-    mutationFn: (id: string) => {
-      return emails.deleteEmail(id);
-    },
+    mutationFn: (id: string) => emails.deleteEmail(id),
     onSuccess() {
       queryClient.refetchQueries({ queryKey: ["getEmails"] });
     },
   });
-  return { mutate, isPending };
 };

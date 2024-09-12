@@ -1,4 +1,5 @@
 type TypeisEmailFn = (email: string) => boolean;
+
 export const isEmailFn: TypeisEmailFn = (email) => {
   return String(email)
     .toLowerCase()

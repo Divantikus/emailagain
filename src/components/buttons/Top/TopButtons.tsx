@@ -1,21 +1,25 @@
 import { ChevronDown, MoveDiagonal, X } from "lucide-react";
-import { FC, useContext } from "react";
 import { AnimContext } from "src/context/context";
+import { useContext } from "react";
 import style from "./TopButtons.module.scss";
-export const TopButtons: FC = () => {
+
+export const TopButtons = () => {
   const context = useContext(AnimContext);
-  const AnimFn = () => {
-    if (context) {
-      context.setEmailIsHidden(!context.emailIsHidden);
-    }
-  };
+
+  if (!context) return;
+
+  const { emailIsHidden, setEmailIsHidden } = context;
+
   return (
     <div className={style.buttonContainer}>
-      <button className={style.button} onClick={AnimFn}>
+      <button
+        className={style.button}
+        onClick={() => setEmailIsHidden(!emailIsHidden)}
+      >
         <ChevronDown
           size={20}
           color="gray"
-          className={context?.emailIsHidden ? style.rotate : ""}
+          className={emailIsHidden ? style.rotate : ""}
         />
       </button>
       <button className={style.button}>

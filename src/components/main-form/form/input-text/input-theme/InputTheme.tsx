@@ -1,15 +1,15 @@
 import { useFormContext } from "react-hook-form";
 import style from "./InputTheme.module.scss";
+
 export const emaiThemeName = "emaiTheme";
-const InputTheme = (): JSX.Element => {
+
+export const InputTheme = () => {
   const { register } = useFormContext();
   return (
     <input
-      className={style.inputUserName}
       placeholder="Тема"
       {...register(emaiThemeName)}
+      className={style.inputUserName}
     />
   );
 };
-
-export default InputTheme;

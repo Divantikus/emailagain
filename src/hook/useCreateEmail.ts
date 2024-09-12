@@ -4,11 +4,10 @@ import { emails } from "src/services/emails.service";
 
 export const useCreateEmail = () => {
   const queryClient = useQueryClient();
+
   return useMutation({
     mutationKey: ["createEmail"],
-    mutationFn: (data: FormType) => {
-      return emails.createEmail(data);
-    },
+    mutationFn: (data: FormType) => emails.createEmail(data),
     onSuccess() {
       queryClient.refetchQueries({ queryKey: ["getEmails"] });
     },

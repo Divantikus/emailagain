@@ -1,17 +1,20 @@
-import { useFormContext } from "react-hook-form";
-import { emailInputParam } from "../FormVar";
+import { FormType, InputAddressErrors } from "src/types/types";
 import { AddressInputError } from "../input-errors/address-errors/AddressInputError";
-import { InputAddressErrors } from "src/types/types";
+import { emailInputParam } from "../FormVar";
+import { useFormContext } from "react-hook-form";
 import style from "./InputAddress.module.scss";
 
 export const InputAddress: InputAddressErrors = () => {
   const {
     register,
-    formState: { errors },
     clearErrors,
-  } = useFormContext();
+    formState: {
+      errors: { emailAddress },
+    },
+  } = useFormContext<FormType>();
+
   const clearValidationError = () => {
-    errors.emailAddress ? clearErrors("emailAddress") : null;
+    emailAddress && clearErrors("emailAddress");
   };
 
   return (
@@ -29,9 +32,7 @@ export const InputAddress: InputAddressErrors = () => {
           onChange: clearValidationError,
         })}
       />
-      {errors.emailAddress && (
-        <AddressInputError emailAddress={errors.emailAddress} />
-      )}
+      {emailAddress && <AddressInputError emailAddress={emailAddress} />}
     </div>
   );
 };

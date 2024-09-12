@@ -1,9 +1,11 @@
-import { X } from "lucide-react";
-import { FC } from "react";
 import { TypeFiles } from "src/types/types";
+import { FC } from "react";
+import { X } from "lucide-react";
 import style from "./Files.module.scss";
+
 export const Files: FC<TypeFiles> = ({ files, setFile }) => {
   const filesArr = [...files];
+
   return (
     <div className={style.wrap}>
       <p>
@@ -13,8 +15,8 @@ export const Files: FC<TypeFiles> = ({ files, setFile }) => {
       </p>
 
       <button
-        onClick={() => setFile(new DataTransfer().files)}
         className={style.button}
+        onClick={() => setFile(new DataTransfer().files)}
       >
         <X color="black" />
       </button>

@@ -15,9 +15,9 @@ export const BottomButtonsMarkup: FC<voidProps> = ({ functionProps }) => {
   return (
     <div className={style.flexConteiner}>
       <button
-        className={style.button}
         onClick={clearText}
         title="Очистить поле"
+        className={style.button}
       >
         <Trash2 />
       </button>
@@ -38,10 +38,10 @@ export const BottomButtonsMarkup: FC<voidProps> = ({ functionProps }) => {
           <Paperclip />
         </label>
         <button
-          className={style.sendButton}
           form="form"
           disabled={!isValid}
           title="Отправить форму"
+          className={style.sendButton}
         >
           Send now
           <span className={style.span}>
